@@ -11,6 +11,8 @@ body {
 
 .todo-list {
 	padding-top: 15px;
+	width: 100%;
+	max-width: 360px;
 }
 
 .todo-list__inputs-wrapper {
@@ -28,6 +30,7 @@ body {
 	border-radius: 5px;
 	border: 2px solid rgb(237, 168, 240);
 	height: 49px;
+	width: 49px;
 }
 
 #todo-list__submit:hover {
@@ -52,6 +55,7 @@ body {
 	height: 49px;
 	background-color: rgb(250, 245, 250);
 	color: rgb(57, 42, 58);
+	width: 100%;
 }
 
 .todo-list__subtitle {
@@ -78,6 +82,15 @@ body {
 	height: 59px;
 	display: flex;
 	align-items: center;
+	width: 100%;
+}
+
+.done {
+	opacity: 0.5;
+}
+
+.todo-list__item-index {
+	margin-right: 5px;
 }
 
 .todo-list__item-name {
@@ -121,5 +134,49 @@ body {
 	position: absolute;
 	border-color: crimson;
 	right: 2px;
+	top: 12px;
+}
+
+.todo-list__item-done {
+	margin-left: auto;
+	height: 29px;
+	width: 29px;
+	position: relative;
+	border: 2px solid rgb(237, 168, 240);
+	border-radius: 5px;
+	cursor: pointer;
+	background-color: #fff;
+	margin-left: auto;
+}
+
+.todo-list__item-done:hover {
+	opacity: 0.7;
+}
+
+.todo-list__item-done::before {
+	content: "";
+	width: 8px;
+	transform: rotate(45deg);
+	border-bottom: 2px solid #000;
+	border-bottom-color: rgb(0, 0, 0);
+	border-bottom-color: rgb(0, 0, 0);
+	display: inline-block;
+	border-color: green;
+	position: absolute;
+	right: 14px;
+	top: 16px;
+}
+
+.todo-list__item-done::after {
+	content: "";
+	width: 20px;
+	transform: rotate(-54deg);
+	border-bottom: 2px solid #000;
+	border-bottom-color: rgb(0, 0, 0);
+	border-bottom-color: rgb(0, 0, 0);
+	display: inline-block;
+	position: absolute;
+	border-color: green;
+	right: 0px;
 	top: 12px;
 }
